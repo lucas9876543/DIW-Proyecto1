@@ -1,0 +1,214 @@
+body{
+    background-color: #e7e6e6;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 2000px;
+    
+}
+.contenedor{
+    background: linear-gradient(145deg, #fad4e9, #8476ff); 
+    width: 600px;
+    min-width: 600px;
+    max-width: 1200px;
+    display: block;
+    margin: auto;
+    height: 550px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px; 
+    position: relative;
+    top: 150px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.contenedor::after, .contenedor::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent 10%, #00b7ff, transparent 50%); 
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 20px; 
+    animation: 6s spin linear infinite;
+}
+
+.contenedor::before{
+    filter: blur(1.8rem);
+    opacity: 0.7;
+}
+
+@keyframes spin{
+
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+
+}
+
+
+h1{
+    color: aliceblue;
+    padding: 20px 30px 80px 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.moneda{
+
+    padding: 20px;
+    margin: auto;
+
+}
+
+/* Estilo de los selects (con banderas) */
+#moneda-uno, #moneda-dos {
+    color: #333333;
+    padding: 12px;
+    width: 205px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd; /* Borde suave */
+    font-size: 1rem;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    background: transparent;
+    background-position: left ;
+    background-repeat: no-repeat;
+    background-size: 20px 15px; /* Ajustar el tamaño de las banderas aquí */
+    padding-left: 25px; /* Espacio para la bandera */
+    appearance: none; /* Elimina los estilos predeterminados */
+    
+}
+
+
+#cantidad-uno, #cantidad-dos{
+    padding: 12px;
+    border-radius: 8px;
+    width: 150px;
+    border: 1px solid #dddddd;
+    font-size: 1rem;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.boton{
+    padding: 30px;
+    position: relative;
+    right: 90px;
+}
+
+button{
+    background: linear-gradient(145deg, #6e85fa, #fc6c89);
+    padding: 10px;
+    width: 120px;
+    border-radius: 8px;
+    position: relative;
+    z-index: 9999;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Efecto al presionar el botón */
+button:active {
+    background: linear-gradient(145deg, #6e85fa, #fc6c89);
+    transform: scale(0.95); /* Hace que el botón se reduzca un poco */
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); /* Sombra más pequeña */
+}
+img{
+    width:  20px;
+    
+}
+
+
+.cambio{
+    position: relative;
+    left: 100px;
+    bottom: 60px ;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.dark{
+    background-color: #272626;
+}
+
+.modo-oscuro{
+
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+.modo{
+   position: relative; 
+   display: inline-block;
+   width: 60px;
+   height: 34px;
+}
+
+
+.modo input{
+ opacity: 0;
+ width: 0;
+ height: 0;
+}
+
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #292828;
+    border-radius: 34px;
+    -webkit-transition: 0.4s;
+    transition: 0,4s;
+}
+
+.slider::before{
+    position: absolute;
+    content: '';
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    -webkit-transition: 0.4s ;
+    transition: 0,4s;
+}
+
+input:checked+.slider{
+    background-color: rgb(192, 192, 23) ;
+}
+
+input:focus+.slider{
+    box-shadow: 0 0 1px #c5c50f;
+}
+
+input:checked+.slider::before{
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+
+
+

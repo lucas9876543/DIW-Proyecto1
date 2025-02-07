@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="imgs/faviconmoney.png" type="image/x-icon">
+    <title>Conversor de monedas</title>
+  </head>
+  <body>
+    
+    <div class="modo-oscuro">
+        <label class="modo">
+            <input type="checkbox" id="input">
+            <span class="slider"></span>
+        </label>
+    </div>
+    
+
+    <div class="contenedor" id="contenedor">
+      <h1>Conversor de monedas nacionales</h1>
+
+      <div class="moneda">
+        <select id="moneda-uno">
+          <option value="AED" data-flag="https://flagpedia.net/data/flags/h80/ae.png">AED (Emiratos Árabes)</option>
+    <option value="ARS" data-flag="https://flagpedia.net/data/flags/h80/ar.png">ARS (Argentina)</option>
+    <option value="AUD" data-flag="https://flagpedia.net/data/flags/h80/au.png">AUD (Australia)</option>
+    <option value="BGN" data-flag="https://flagpedia.net/data/flags/h80/bg.png">BGN (Bulgaria)</option>
+    <option value="BRL" data-flag="https://flagpedia.net/data/flags/h80/br.png">BRL (Brasil)</option>
+    <option value="BSD" data-flag="https://flagpedia.net/data/flags/h80/bs.png">BSD (Bahamas)</option>
+    <option value="CAD" data-flag="https://flagpedia.net/data/flags/h80/ca.png">CAD (Canadá)</option>
+    <option value="CHF" data-flag="https://flagpedia.net/data/flags/h80/ch.png">CHF (Suiza)</option>
+    <option value="CLP" data-flag="https://flagpedia.net/data/flags/h80/cl.png">CLP (Chile)</option>
+    <option value="CNY" data-flag="https://flagpedia.net/data/flags/h80/cn.png">CNY (China)</option>
+    <option value="COP" data-flag="https://flagpedia.net/data/flags/h80/co.png">COP (Colombia)</option>
+    <option value="CZK" data-flag="https://flagpedia.net/data/flags/h80/cz.png">CZK (Rep. Checa)</option>
+    <option value="DKK" data-flag="https://flagpedia.net/data/flags/h80/dk.png">DKK (Dinamarca)</option>
+    <option value="DOP" data-flag="https://flagpedia.net/data/flags/h80/do.png">DOP (Rep. Dominicana)</option>
+    <option value="EGP" data-flag="https://flagpedia.net/data/flags/h80/eg.png">EGP (Egipto)</option>
+    <option  value="EUR" data-flag="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/2560px-Flag_of_Europe.svg.png">EUR (Unión Europea)</option>
+    <option value="FJD" data-flag="https://flagpedia.net/data/flags/h80/fj.png">FJD (Fiyi)</option>
+    <option value="GBP" data-flag="https://flagpedia.net/data/flags/h80/gb.png">GBP (Reino Unido)</option>
+    <option value="GTQ" data-flag="https://flagpedia.net/data/flags/h80/gt.png">GTQ (Guatemala)</option>
+    <option value="HKD" data-flag="https://flagpedia.net/data/flags/h80/hk.png">HKD (Hong Kong)</option>
+    <option value="HRK" data-flag="https://flagpedia.net/data/flags/h80/hr.png">HRK (Croacia)</option>
+    <option value="HUF" data-flag="https://flagpedia.net/data/flags/h80/hu.png">HUF (Hungría)</option>
+    <option value="IDR" data-flag="https://flagpedia.net/data/flags/h80/id.png">IDR (Indonesia)</option>
+    <option value="ILS" data-flag="https://flagpedia.net/data/flags/h80/il.png">ILS (Israel)</option>
+    <option value="INR" data-flag="https://flagpedia.net/data/flags/h80/in.png">INR (India)</option>
+    <option value="ISK" data-flag="https://flagpedia.net/data/flags/h80/is.png">ISK (Islandia)</option>
+    <option value="JPY" data-flag="https://flagpedia.net/data/flags/h80/jp.png">JPY (Japón)</option>
+    <option value="KRW" data-flag="https://flagpedia.net/data/flags/h80/kr.png">KRW (Corea del Sur)</option>
+    <option value="KZT" data-flag="https://flagpedia.net/data/flags/h80/kz.png">KZT (Kazajistán)</option>
+    <option value="MXN" data-flag="https://flagpedia.net/data/flags/h80/mx.png">MXN (México)</option>
+    <option value="MYR" data-flag="https://flagpedia.net/data/flags/h80/my.png">MYR (Malasia)</option>
+    <option value="NOK" data-flag="https://flagpedia.net/data/flags/h80/no.png">NOK (Noruega)</option>
+    <option value="NZD" data-flag="https://flagpedia.net/data/flags/h80/nz.png">NZD (Nueva Zelanda)</option>
+    <option value="PAB" data-flag="https://flagpedia.net/data/flags/h80/pa.png">PAB (Panamá)</option>
+    <option value="PEN" data-flag="https://flagpedia.net/data/flags/h80/pe.png">PEN (Perú)</option>
+    <option value="PHP" data-flag="https://flagpedia.net/data/flags/h80/ph.png">PHP (Filipinas)</option>
+    <option value="PKR" data-flag="https://flagpedia.net/data/flags/h80/pk.png">PKR (Pakistán)</option>
+    <option value="PLN" data-flag="https://flagpedia.net/data/flags/h80/pl.png">PLN (Polonia)</option>
+    <option value="PYG" data-flag="https://flagpedia.net/data/flags/h80/py.png">PYG (Paraguay)</option>
+    <option value="RON" data-flag="https://flagpedia.net/data/flags/h80/ro.png">RON (Rumanía)</option>
+    <option value="RUB" data-flag="https://flagpedia.net/data/flags/h80/ru.png">RUB (Rusia)</option>
+    <option value="SAR" data-flag="https://flagpedia.net/data/flags/h80/sa.png">SAR (Arabia Saudita)</option>
+    <option value="SEK" data-flag="https://flagpedia.net/data/flags/h80/se.png">SEK (Suecia)</option>
+    <option value="SGD" data-flag="https://flagpedia.net/data/flags/h80/sg.png">SGD (Singapur)</option>
+    <option value="THB" data-flag="https://flagpedia.net/data/flags/h80/th.png">THB (Tailandia)</option>
+    <option value="TRY" data-flag="https://flagpedia.net/data/flags/h80/tr.png">TRY (Turquía)</option>
+    <option value="TWD" data-flag="https://flagpedia.net/data/flags/h80/tw.png">TWD (Taiwán)</option>
+    <option value="UAH" data-flag="https://flagpedia.net/data/flags/h80/ua.png">UAH (Ucrania)</option>
+    <option value="USD" selected data-flag="https://flagpedia.net/data/flags/h80/us.png">USD (Estados Unidos)</option>
+    <option value="UYU" data-flag="https://flagpedia.net/data/flags/h80/uy.png">UYU (Uruguay)</option>
+    <option value="VND" data-flag="https://flagpedia.net/data/flags/h80/vn.png">VND (Vietnam)</option>
+    <option value="ZAR" data-flag="https://flagpedia.net/data/flags/h80/za.png">ZAR (Sudáfrica)</option>
+        </select>
+
+        <input type="number" id="cantidad-uno" placeholder="0" value="0" min="0" />
+      </div>
+
+      <div class="boton">
+        <button id="boton"><img src="imgs/58924.png" alt="flechas"></button>
+      </div>
+
+      <div class="cambio" id="cambio"></div>
+
+      <div class="moneda">
+        <select id="moneda-dos">
+          <option value="AED" data-flag="https://flagpedia.net/data/flags/h80/ae.png">AED (Emiratos Árabes)</option>
+    <option value="ARS" data-flag="https://flagpedia.net/data/flags/h80/ar.png">ARS (Argentina)</option>
+    <option value="AUD" data-flag="https://flagpedia.net/data/flags/h80/au.png">AUD (Australia)</option>
+    <option value="BGN" data-flag="https://flagpedia.net/data/flags/h80/bg.png">BGN (Bulgaria)</option>
+    <option value="BRL" data-flag="https://flagpedia.net/data/flags/h80/br.png">BRL (Brasil)</option>
+    <option value="BSD" data-flag="https://flagpedia.net/data/flags/h80/bs.png">BSD (Bahamas)</option>
+    <option value="CAD" data-flag="https://flagpedia.net/data/flags/h80/ca.png">CAD (Canadá)</option>
+    <option value="CHF" data-flag="https://flagpedia.net/data/flags/h80/ch.png">CHF (Suiza)</option>
+    <option value="CLP" data-flag="https://flagpedia.net/data/flags/h80/cl.png">CLP (Chile)</option>
+    <option value="CNY" data-flag="https://flagpedia.net/data/flags/h80/cn.png">CNY (China)</option>
+    <option value="COP" data-flag="https://flagpedia.net/data/flags/h80/co.png">COP (Colombia)</option>
+    <option value="CZK" data-flag="https://flagpedia.net/data/flags/h80/cz.png">CZK (Rep. Checa)</option>
+    <option value="DKK" data-flag="https://flagpedia.net/data/flags/h80/dk.png">DKK (Dinamarca)</option>
+    <option value="DOP" data-flag="https://flagpedia.net/data/flags/h80/do.png">DOP (Rep. Dominicana)</option>
+    <option value="EGP" data-flag="https://flagpedia.net/data/flags/h80/eg.png">EGP (Egipto)</option>
+    <option  value="EUR" selected  data-flag="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/2560px-Flag_of_Europe.svg.png">EUR (Unión Europea)</option>
+    <option value="FJD" data-flag="https://flagpedia.net/data/flags/h80/fj.png">FJD (Fiyi)</option>
+    <option value="GBP" data-flag="https://flagpedia.net/data/flags/h80/gb.png">GBP (Reino Unido)</option>
+    <option value="GTQ" data-flag="https://flagpedia.net/data/flags/h80/gt.png">GTQ (Guatemala)</option>
+    <option value="HKD" data-flag="https://flagpedia.net/data/flags/h80/hk.png">HKD (Hong Kong)</option>
+    <option value="HRK" data-flag="https://flagpedia.net/data/flags/h80/hr.png">HRK (Croacia)</option>
+    <option value="HUF" data-flag="https://flagpedia.net/data/flags/h80/hu.png">HUF (Hungría)</option>
+    <option value="IDR" data-flag="https://flagpedia.net/data/flags/h80/id.png">IDR (Indonesia)</option>
+    <option value="ILS" data-flag="https://flagpedia.net/data/flags/h80/il.png">ILS (Israel)</option>
+    <option value="INR" data-flag="https://flagpedia.net/data/flags/h80/in.png">INR (India)</option>
+    <option value="ISK" data-flag="https://flagpedia.net/data/flags/h80/is.png">ISK (Islandia)</option>
+    <option value="JPY" data-flag="https://flagpedia.net/data/flags/h80/jp.png">JPY (Japón)</option>
+    <option value="KRW" data-flag="https://flagpedia.net/data/flags/h80/kr.png">KRW (Corea del Sur)</option>
+    <option value="KZT" data-flag="https://flagpedia.net/data/flags/h80/kz.png">KZT (Kazajistán)</option>
+    <option value="MXN" data-flag="https://flagpedia.net/data/flags/h80/mx.png">MXN (México)</option>
+    <option value="MYR" data-flag="https://flagpedia.net/data/flags/h80/my.png">MYR (Malasia)</option>
+    <option value="NOK" data-flag="https://flagpedia.net/data/flags/h80/no.png">NOK (Noruega)</option>
+    <option value="NZD" data-flag="https://flagpedia.net/data/flags/h80/nz.png">NZD (Nueva Zelanda)</option>
+    <option value="PAB" data-flag="https://flagpedia.net/data/flags/h80/pa.png">PAB (Panamá)</option>
+    <option value="PEN" data-flag="https://flagpedia.net/data/flags/h80/pe.png">PEN (Perú)</option>
+    <option value="PHP" data-flag="https://flagpedia.net/data/flags/h80/ph.png">PHP (Filipinas)</option>
+    <option value="PKR" data-flag="https://flagpedia.net/data/flags/h80/pk.png">PKR (Pakistán)</option>
+    <option value="PLN" data-flag="https://flagpedia.net/data/flags/h80/pl.png">PLN (Polonia)</option>
+    <option value="PYG" data-flag="https://flagpedia.net/data/flags/h80/py.png">PYG (Paraguay)</option>
+    <option value="RON" data-flag="https://flagpedia.net/data/flags/h80/ro.png">RON (Rumanía)</option>
+    <option value="RUB" data-flag="https://flagpedia.net/data/flags/h80/ru.png">RUB (Rusia)</option>
+    <option value="SAR" data-flag="https://flagpedia.net/data/flags/h80/sa.png">SAR (Arabia Saudita)</option>
+    <option value="SEK" data-flag="https://flagpedia.net/data/flags/h80/se.png">SEK (Suecia)</option>
+    <option value="SGD" data-flag="https://flagpedia.net/data/flags/h80/sg.png">SGD (Singapur)</option>
+    <option value="THB" data-flag="https://flagpedia.net/data/flags/h80/th.png">THB (Tailandia)</option>
+    <option value="TRY" data-flag="https://flagpedia.net/data/flags/h80/tr.png">TRY (Turquía)</option>
+    <option value="TWD" data-flag="https://flagpedia.net/data/flags/h80/tw.png">TWD (Taiwán)</option>
+    <option value="UAH" data-flag="https://flagpedia.net/data/flags/h80/ua.png">UAH (Ucrania)</option>
+    <option value="USD" data-flag="https://flagpedia.net/data/flags/h80/us.png">USD (Estados Unidos)</option>
+    <option value="UYU" data-flag="https://flagpedia.net/data/flags/h80/uy.png">UYU (Uruguay)</option>
+    <option value="VND" data-flag="https://flagpedia.net/data/flags/h80/vn.png">VND (Vietnam)</option>
+    <option value="ZAR" data-flag="https://flagpedia.net/data/flags/h80/za.png">ZAR (Sudáfrica)</option>
+        </select>
+
+        <input type="number" id="cantidad-dos" placeholder="0" value="0" />
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
